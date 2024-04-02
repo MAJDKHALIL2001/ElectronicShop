@@ -95,7 +95,8 @@ class PostRepository {
     try {
       return NetworkUtil.sendRequest(
         type: RequestType.DELETE,
-        headers: NetworkConfig.getHeaders(type: RequestType.DELETE),
+        headers:
+            NetworkConfig.getHeaders(type: RequestType.DELETE, needAuth: false),
         route: 'posts/$postNum',
       ).then((value) {
         // print("hii");

@@ -5,7 +5,7 @@ import 'package:api_challenge/core/data/network/network_config.dart';
 import 'package:api_challenge/core/enums/request_type.dart';
 import 'package:api_challenge/core/utils/network_util.dart';
 import 'package:dartz/dartz.dart';
-import 'package:flutter/foundation.dart';
+// import 'package:flutter/foundation.dart';
 
 class AuthRepository {
   Future<Either<String, List<ProductModel>>> getallproduct() async {
@@ -21,11 +21,9 @@ class AuthRepository {
         if (commonResponse.getStatus) {
           List<ProductModel> result = [];
 
-          commonResponse.data!.forEach(
-            (element) {
-              result.add(ProductModel.fromJson(element));
-            },
-          );
+          commonResponse.data!.forEach((element) {
+            result.add(ProductModel.fromJson(element));
+          });
           // for (var element in commonResponse.data!) {
           //   result.add(ProductModel.fromJson(element));
           //   if (result.length == 2) {

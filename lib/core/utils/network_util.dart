@@ -8,7 +8,7 @@ import 'package:path/path.dart' as path;
 import 'package:http_parser/http_parser.dart';
 
 class NetworkUtil {
-  static String baseUrl = 'fakestoreapi.com';
+  static String baseUrl = 'jsonplaceholder.typicode.com';
 
   static Future<dynamic> sendRequest({
     required RequestType type,
